@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - Attendance System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <div class="login-container">
+        <h2>Teacher Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p id="errorMessage" class="error-message"></p>
+        </form>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard" class="dashboard">
+        <h2>Welcome, <span id="teacherName"></span>!</h2>
+        <button id="logoutBtn">Logout</button>
+
+        <!-- Class Management -->
+        <div class="class-section">
+            <h3>Manage Classes</h3>
+            <input type="text" id="classNameInput" placeholder="Enter Class Name">
+            <button id="addClassBtn">Add Class</button>
+            <ul id="classList"></ul>
+        </div>
+
+        <!-- Student Management -->
+        <div class="student-section">
+            <h3>Manage Students</h3>
+            <input type="text" id="studentNameInput" placeholder="Enter Student Name">
+            <button id="addStudentBtn">Add Student</button>
+            <ul id="studentList"></ul>
+        </div>
+
+        <!-- Attendance Table -->
+        <div class="attendance-section">
+            <h3>Mark Attendance</h3>
+            <input type="date" id="attendanceDate">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Present</th>
+                        <th>Absent</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTable"></tbody>
+            </table>
+            <button id="saveAttendanceBtn">Save Attendance</button>
+        </div>
+
+        <!-- Change Password -->
+        <div class="settings-section">
+            <h3>Change Password</h3>
+            <input type="password" id="newPassword" placeholder="New Password">
+            <button id="changePasswordBtn">Change</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
 
